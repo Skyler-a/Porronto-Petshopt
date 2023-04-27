@@ -4,7 +4,7 @@ const userIdValidate = require('./validarIdUsuario');
 class PetService {
     async cadastrarPet(payload) {
         try {
-            const { id_Usuario } = payload;
+            const { id_usuario } = payload;
             await userIdValidate(id_Usuario);
             const result = petRepository.cadastrarPet(payload);
             return result;

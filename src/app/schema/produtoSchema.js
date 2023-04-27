@@ -23,6 +23,11 @@ const produtoSchema = new mongoose.Schema(
     categoria: {
         type: String,
         required: true
+    },
+    id_admin: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'administracao',
+        required: true
     }
 },
 {
